@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gardner Global Communications — PR for Creative Businesses</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#1c2d5e;
+  --teal:#5dbdb4;
+  --white:#ffffff;
+  --light:#f7f8fa;
+  --text:#222;
+  --muted:#666;
+}
+body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--text);}
+body{max-width:1440px;margin:0 auto;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border:none;box-shadow:none;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:80px;backdrop-filter:blur(8px);}
+.nav-logo{display:flex;align-items:center;text-decoration:none !important;border:none !important;outline:none;box-shadow:none;background:transparent;}.nav-logo img{border:none !important;outline:none;display:block;vertical-align:bottom;}
+.nav-logo-text{font-size:13px;font-weight:700;letter-spacing:0.14em;color:var(--navy);line-height:1.2;}
+.nav-logo-text span{color:var(--teal);}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--teal);}
+
+.hero{margin-top:80px;position:relative;height:520px;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(28,45,94,0.82) 0%,rgba(28,45,94,0.45) 60%,rgba(28,45,94,0.15) 100%);}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 72px;}
+.hero-kicker-rule{height:1px;background:var(--teal);margin-bottom:16px;display:block;width:160px;}.hero-kicker{color:var(--teal);font-size:15px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:18px;}
+.hero-headline{color:var(--white);font-size:40px;font-weight:500;line-height:1.3;max-width:640px;margin-bottom:18px;letter-spacing:0.06em;}
+.hero-headline em{color:var(--teal);font-style:normal;font-weight:400;}
+.hero-sub{color:rgba(255,255,255,0.72);font-size:14px;line-height:1.75;max-width:480px;margin-bottom:32px;}
+.hero-cta{display:inline-block;background:transparent;color:var(--white);font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:9px 0;text-decoration:none;transition:all 0.2s;border:1px solid var(--teal);width:160px;text-align:center;}
+.hero-cta:hover{background:rgba(93,189,180,0.15);border-color:var(--teal);}
+
+.section{padding:80px 72px;}
+.section-alt{background:var(--light);}
+.section-kicker{color:var(--teal);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:12px;}
+.section-title{color:var(--navy);font-size:28px;font-weight:700;letter-spacing:0.02em;margin-bottom:6px;}
+.section-rule{width:48px;height:2px;background:var(--teal);margin:16px 0 32px;}
+
+.about-grid{display:grid;grid-template-columns:1fr 340px;gap:72px;align-items:start;}.about-photo-wrap{overflow:hidden;border-radius:2px;max-height:297px;}
+.about-text p{font-size:15px;line-height:1.8;color:#333;margin-bottom:18px;}
+.about-photo{width:100%;height:auto;display:block;margin-top:-30px;}
+
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(28,45,94,0.08);border:1px solid rgba(28,45,94,0.08);}
+.service-card{background:var(--white);padding:36px 32px;}
+.service-card-title{color:var(--teal);font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(93,189,180,0.3);}
+.service-item{margin-bottom:18px;}
+.service-item-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.service-item-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+
+.globe-banner{position:relative;height:200px;overflow:hidden;}
+.globe-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+.globe-overlay{position:absolute;inset:0;background:rgba(28,45,94,0.55);display:flex;align-items:center;justify-content:center;}
+.globe-text{color:var(--white);font-size:16px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;text-align:center;}
+.globe-text span{color:var(--teal);}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.why-card{padding:36px;border:1px solid rgba(28,45,94,0.1);border-top:3px solid var(--teal);}
+.why-card-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px;letter-spacing:0.04em;}
+.why-card-text{font-size:13px;color:var(--muted);line-height:1.75;}
+
+.coverage-teaser{padding:80px 72px;background:var(--navy);}
+.coverage-teaser .section-kicker{color:var(--teal);}
+.coverage-teaser .section-title{color:var(--white);}
+.coverage-teaser .section-rule{background:var(--teal);}
+.coverage-preview{margin-bottom:36px;border-radius:3px;overflow:hidden;}
+.coverage-preview img{width:100%;display:block;}
+.coverage-cta-wrap{text-align:center;}
+.coverage-cta{display:inline-block;background:var(--teal);color:var(--white);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:15px 36px;text-decoration:none;transition:background 0.2s;}
+.coverage-cta:hover{background:#4aaba2;}
+
+
+/* CAROUSEL */
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:20px;padding:0 0 24px;} 
+.carousel-btn{background:var(--teal);color:var(--white);border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
+.carousel-btn:hover{background:#4aaba2;}
+.carousel-dots{display:flex;gap:8px;}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:background 0.2s;border:none;}
+.dot.active{background:var(--teal);}
+.carousel-counter{font-size:12px;color:rgba(255,255,255,0.6);font-weight:600;letter-spacing:0.08em;min-width:44px;text-align:center;}
+.carousel-auto-label{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:0.08em;text-transform:uppercase;}
+.carousel-wrap{overflow:hidden;border-radius:4px;}
+.carousel-track{display:flex;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);}
+.carousel-slide{min-width:100%;}
+.carousel-slide img{width:100%;display:block;}
+/* ENDORSEMENTS — logo beside quote */
+.endorsements{padding:80px 72px;}
+.endorsements .section-kicker{color:var(--teal);}
+.endorsements .section-title{color:var(--navy);}
+.testimonials-list{display:flex;flex-direction:column;gap:2px;background:rgba(28,45,94,0.06);}
+.testimonial{background:var(--white);padding:36px 40px;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:start;}
+.testimonial-logo-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:4px;}
+.testimonial-logo-link{display:block;text-decoration:none;}
+.testimonial-logo-link{display:block;padding:8px;border:1px solid rgba(28,45,94,0.1);border-radius:2px;transition:border-color 0.2s;background:#fff;min-width:110px;min-height:60px;display:flex;align-items:center;justify-content:center;}
+.testimonial-logo-link:hover{border-color:var(--teal);}
+.testimonial-logo-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:4px;}
+.testimonial-content{}
+.testimonial-quote{font-size:13px;color:#444;line-height:1.85;margin-bottom:16px;font-style:italic;}
+.testimonial-attr{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.testimonial-company{font-size:11px;color:var(--teal);font-weight:600;letter-spacing:0.06em;}
+
+.background-section{padding:80px 72px;background:var(--light);}
+.bg-grid{display:grid;grid-template-columns:1fr 380px;gap:72px;align-items:start;}
+.bg-text p{font-size:15px;line-height:1.8;color:#333;margin-bottom:18px;}
+.bg-pullquote{background:var(--white);border-left:3px solid var(--teal);padding:28px;}
+.bg-pullquote-text{font-size:13px;color:#444;line-height:1.8;font-style:italic;margin-bottom:16px;}
+.bg-pullquote-attr{font-size:12px;font-weight:700;color:var(--navy);}
+.bg-pullquote-title{font-size:11px;color:var(--teal);font-weight:600;margin-top:2px;}
+
+.contact-section{padding:80px 72px;background:var(--navy);}
+.contact-section .section-kicker{color:var(--teal);}
+.contact-section .section-title{color:var(--white);}
+.contact-section .section-rule{background:var(--teal);}
+.contact-lead{color:rgba(255,255,255,0.65);font-size:15px;line-height:1.75;max-width:520px;margin-bottom:32px;}
+.contact-email{display:inline-block;color:var(--teal);font-size:16px;font-weight:700;letter-spacing:0.04em;text-decoration:none;border-bottom:1px solid rgba(93,189,180,0.4);padding-bottom:3px;transition:border-color 0.2s;}
+.contact-email:hover{border-color:var(--teal);}
+
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);padding:28px 72px;display:flex;align-items:center;justify-content:space-between;}
+.footer-strapline{color:var(--teal);font-size:15px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;}
+.footer-copy{color:rgba(255,255,255,0.3);font-size:11px;}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ── MOBILE HAMBURGER ── */
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:all 0.3s;}
+.nav-mobile-menu{display:none;position:fixed;top:80px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(8px);z-index:99;padding:24px 32px;border-top:1px solid rgba(28,45,94,0.1);}
+.nav-mobile-menu.open{display:block;}
+.nav-mobile-menu li{list-style:none;padding:12px 0;border-bottom:1px solid rgba(28,45,94,0.07);}
+.nav-mobile-menu li:last-child{border-bottom:none;}
+.nav-mobile-menu a{font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);text-decoration:none;}
+
+/* ── TABLET (max 900px) ── */
+@media(max-width:900px){
+  nav{padding:0 32px;}
+  .hero-content{padding:0 48px;}
+  .hero-headline{font-size:32px;}
+  .section{padding:64px 48px;}
+  .coverage-teaser{padding:64px 48px;}
+  .endorsements{padding:64px 48px;}
+  .background-section{padding:64px 48px;}
+  .contact-section{padding:64px 48px;}
+  footer{padding:24px 48px;}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .about-photo-wrap{max-height:300px;overflow:hidden;}.about-photo{width:100%;height:auto;display:block;margin-top:-30px;}
+  .bg-grid{grid-template-columns:1fr;gap:40px;}
+  .why-grid{grid-template-columns:1fr;gap:24px;}
+  .services-grid{grid-template-columns:1fr;}
+  .testimonial{grid-template-columns:90px 1fr;gap:24px;}
+}
+
+/* ── MOBILE (max 600px) ── */
+@media(max-width:600px){
+  nav{padding:0 20px;height:64px;}
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .nav-mobile-menu{top:64px;}
+
+  /* Hero Option B: photo strip on top, text on solid navy below */
+  .hero{margin-top:64px;height:auto;min-height:0;display:flex;flex-direction:column;}
+  .hero-img{position:static;width:100%;height:160px;object-fit:cover;object-position:center 30%;display:block;opacity:1;}
+  .hero-overlay{position:static;background:transparent;display:none;}
+  .hero-content{position:static;background:#1c2d5e;padding:28px 24px 36px;justify-content:flex-start;flex:1;}
+  .hero-kicker-rule{width:80px;}
+  .hero-headline{font-size:24px;letter-spacing:0.02em;max-width:100%;}
+  .hero-sub{font-size:13px;margin-bottom:24px;max-width:100%;}
+  .hero-cta{width:100%;max-width:200px;font-size:10px;padding:11px 0;}
+
+  .section{padding:48px 20px;}
+  .coverage-teaser{padding:48px 20px;}
+  .endorsements{padding:48px 20px;}
+  .background-section{padding:48px 20px;}
+  .contact-section{padding:48px 20px;}
+  footer{padding:24px 20px;flex-direction:column;gap:10px;align-items:flex-start;}
+
+  .section-title{font-size:21px;}
+  .globe-text{font-size:12px;letter-spacing:0.08em;padding:0 16px;}
+  .globe-banner{height:160px;}
+
+  .about-grid{grid-template-columns:1fr;gap:32px;}
+  /* Photo comes after text on mobile */
+  .about-photo-wrap{order:2;max-height:none;}
+  .about-text{order:1;}
+  .about-photo{margin-top:0;}
+
+  .bg-grid{grid-template-columns:1fr;gap:32px;}
+  .why-grid{grid-template-columns:1fr;gap:16px;}
+  .why-card{padding:24px 20px;}
+  .services-grid{grid-template-columns:1fr;}
+  .service-card{padding:28px 20px;}
+
+  /* Testimonials: logo left of name, quote below */
+  .testimonial{grid-template-columns:1fr;gap:16px;padding:24px 20px;}
+  .testimonial-logo-wrap{flex-direction:row;justify-content:flex-start;padding-top:0;gap:16px;align-items:center;}
+  .testimonial-logo-link{min-width:80px;min-height:44px;}
+
+  /* Carousel: larger tap targets */
+  .carousel-controls{gap:12px;}
+  .carousel-btn{width:40px;height:40px;font-size:16px;}
+  .dot{width:10px;height:10px;}
+
+  .contact-lead{font-size:14px;}
+  .contact-email{font-size:15px;}
+}
+
+/* ── VERY SMALL (max 380px) ── */
+@media(max-width:380px){
+  .hero-headline{font-size:21px;}
+  .section{padding:40px 16px;}
+  .coverage-teaser,.endorsements,.background-section,.contact-section{padding:40px 16px;}
+  footer{padding:20px 16px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="images/gardner-global-communications.png" alt="Gardner Global Communications" style="height:56px;width:auto;display:block;border:none !important;outline:none;background:transparent;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Gardner Global Communications</a></li>
+    <li><a href="#coverage">Coverage</a></li>
+    <li><a href="#endorsements">Endorsements</a></li>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<ul class="nav-mobile-menu" id="mobileMenu">
+  <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+  <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+  <li><a href="#why" onclick="closeMobileMenu()">Why Gardner Global Communications</a></li>
+  <li><a href="#coverage" onclick="closeMobileMenu()">Coverage</a></li>
+  <li><a href="#endorsements" onclick="closeMobileMenu()">Endorsements</a></li>
+  <li><a href="#background" onclick="closeMobileMenu()">Background</a></li>
+  <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+</ul>
+
+<section class="hero">
+  <img class="hero-img" src="images/los-angeles-skyline-at-night.jpg" alt="Los Angeles skyline at night">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-kicker-rule"></div><div class="hero-kicker">PR for Creative Businesses</div>
+    <div class="hero-headline">Building profile and reputation worldwide</div>
+    <a href="#contact" class="hero-cta">Get in touch</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="reveal">
+    <div class="section-kicker">About</div>
+    <div class="section-title">Gardner Global Communications</div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>A Los Angeles-based international PR consultancy serving TV production companies, content distributors, streaming platforms, live entertainment producers and digital content creators.</p>
+      <p>Founded by Charlie Gardner, with more than 20 years of entertainment PR experience — including serving on the Group Executive Committee of Endemol Shine Group, then the world's largest independent production company with operations in more than 20 countries.</p>
+      <p>Gardner Global Communications provides senior communications counsel that builds visibility, protects reputation and delivers measurable results — across the U.S. and internationally.</p>
+    </div>
+    <div class="about-photo-wrap"><img loading="lazy" class="about-photo" src="images/charlie-gardner-founder-of-gardner-globa.jpg" alt="Charlie Gardner, Founder of Gardner Global Communications"></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="services">
+  <div class="reveal">
+    <div class="section-kicker">What I Do</div>
+    <div class="section-title">Services</div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-card-title">Amplifying Success</div>
+      <div class="service-item">
+        <div class="service-item-name">Company Profile Building and Reputation Management</div>
+        <div class="service-item-desc">Raising the domestic and international profile of TV production companies, streaming platforms, distributors, live entertainment producers, and digital content creators — from established studios to producers and creators of short-form and micro-drama content.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-name">Content, IP, and Brand Promotion</div>
+        <div class="service-item-desc">Driving awareness and media coverage for productions, formats, and cross-platform content brands as they expand across markets.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-name">Executive Support</div>
+        <div class="service-item-desc">Building the profile and influence of senior executives and creative leadership through targeted media and industry engagement.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-title">Narrative Strategy</div>
+      <div class="service-item">
+        <div class="service-item-name">Strategic Messaging</div>
+        <div class="service-item-desc">Developing clear, consistent messaging for B2B audiences — including industry trade media, commercial partners, and investors.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-name">Media Training</div>
+        <div class="service-item-desc">Hands-on media training and preparation covering tone of voice, social media positioning, executive speaking engagements, and keynote delivery.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-name">Crisis Communications</div>
+        <div class="service-item-desc">Crisis planning and rapid-response communications for corporate and production issues — across single-territory and multi-territory productions.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-title">Stakeholder Relations</div>
+      <div class="service-item">
+        <div class="service-item-name">Partner and Network Communications</div>
+        <div class="service-item-desc">Managing communications across networks, co-producers, commercial partners, and third-party agencies to ensure strategic alignment and consistent market positioning.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-name">Investor Relations</div>
+        <div class="service-item-desc">Supporting leadership teams with messaging, positioning, and presentation materials for investors and parent companies.</div>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-title">Internal Communications</div>
+      <div class="service-item">
+        <div class="service-item-name">Employee and Leadership Engagement</div>
+        <div class="service-item-desc">Supporting company leadership and HR to manage the internal flow of information around significant business developments — including town halls, leadership messaging, and change communications — delivered clearly, accurately, and on time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="globe-banner">
+  <img loading="lazy" class="globe-img" src="images/world-city-lights-from-space.jpg" alt="World city lights from space">
+  <div class="globe-overlay">
+    <div class="globe-text">PROMOTING CREATIVE BUSINESSES <span>AROUND THE WORLD</span></div>
+  </div>
+</div>
+
+<section class="section" id="why">
+  <div class="reveal">
+    <div class="section-kicker">The Difference</div>
+    <div class="section-title">Why Gardner Global Communications</div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="why-grid reveal">
+    <div class="why-card">
+      <div class="why-card-title">Senior Counsel, Always</div>
+      <div class="why-card-text">Every client engagement is led personally by Charlie Gardner — ensuring consistency, confidentiality, and a nuanced understanding of your business priorities and sensitivities. It is a level of seniority and personalization that larger agencies rarely deliver.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-card-title">International Expertise, U.S. Focus</div>
+      <div class="why-card-text">Gardner Global Communications brings U.S. market expertise and international reach to creative businesses at every stage of their growth — whether expanding into new territories, building profile domestically, or strengthening their global positioning.</div>
+    </div>
+  </div>
+</section>
+
+<section class="coverage-teaser" id="coverage">
+  <div class="reveal">
+    <div class="section-kicker">Press &amp; Media</div>
+    <div class="section-title">International Coverage</div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="reveal">
+    <div class="carousel-controls">
+      <button class="carousel-btn" onclick="move(-1)" aria-label="Previous">&#8592;</button>
+      <div class="carousel-dots" id="dots"></div>
+      <span class="carousel-counter" id="counter">1 / 5</span>
+      <button class="carousel-btn" onclick="move(1)" aria-label="Next">&#8594;</button>
+      <span class="carousel-auto-label" id="autoLabel">Auto</span>
+    </div>
+    <div class="carousel-wrap">
+            <div class="carousel-track" id="track">
+        <div class="carousel-slide"><img loading="lazy" src="images/press-coverage-variety-daily-mail-the-gu.jpg" alt="Press coverage — Variety, Daily Mail, The Guardian, CNBC"></div>
+        <div class="carousel-slide"><img loading="lazy" src="images/press-coverage-screen-daily-hollywood-re.jpg" alt="Press coverage — Screen Daily, Hollywood Reporter, Broadcast International"></div>
+        <div class="carousel-slide"><img loading="lazy" src="images/press-coverage-hollywood-reporter-deadli.jpg" alt="Press coverage — Hollywood Reporter, Deadline, Variety"></div>
+        <div class="carousel-slide"><img loading="lazy" src="images/press-coverage-variety-le-figaro-austral.jpg" alt="Press coverage — Variety, Le Figaro, Australian Business Review"></div>
+        <div class="carousel-slide"><img loading="lazy" src="images/press-coverage-deadline-business-insider.jpg" alt="Press coverage — Deadline, Business Insider, C21, Realscreen, Hollywood Reporter"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="endorsements section" id="endorsements">
+  <div class="reveal">
+    <div class="section-kicker">Testimonials</div>
+    <div class="section-title">Client Endorsements</div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="testimonials-list reveal">
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.all3media.com" target="_blank" rel="noopener" class="testimonial-logo-link" title="All3Media">
+          <img loading="lazy" src="images/all3media-america.png" alt="All3Media America" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"Charlie effectively served as our de facto in-house communications lead in the U.S., elevating All3Media's North American profile with smart, well-placed coverage across the most influential industry media. He brings decades of experience and relationships, paired with an embedded, sleeves-rolled-up approach that made him feel like a true member of the team. He shaped the public narrative around our shows, talent, and key developments, while managing communications with partners, networks, and internal teams. I recommend Charlie without reservation to any company seeking senior communications counsel who can deliver meaningful visibility while operating seamlessly with internal stakeholders."</div>
+        <div class="testimonial-attr">Mike Large</div>
+        <div class="testimonial-company">Group Head of Communications, All3Media</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.eurekaproductions.com.au" target="_blank" rel="noopener" class="testimonial-logo-link" title="Eureka Productions">
+          <img loading="lazy" src="images/eureka-productions.jpg" alt="Eureka Productions" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"By securing consistent, positive coverage across key industry media, Charlie helped position Eureka as a distinctive, fast-growing producer. With a clear and strategically grounded approach, he reinforced our reputation as a creator of bold, original formats in a highly competitive global marketplace. He worked closely with our parent company, Fremantle, our production partners, and teams across Australia and the U.S. to ensure communications remained aligned with company priorities. Throughout his engagement, Charlie managed sensitive issues with sound judgment and discretion, consistently delivering positive outcomes. I would highly recommend him to any company navigating growth or strategic change."</div>
+        <div class="testimonial-attr">Chris Culvenor and Paul Franklin</div>
+        <div class="testimonial-company">Co-Founders, Eureka Productions (a Fremantle company)</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.asachamediagroup.com" target="_blank" rel="noopener" class="testimonial-logo-link" title="Asacha Media Group">
+          <img loading="lazy" src="images/asacha-media-group.jpg" alt="Asacha Media Group" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"Having driven strategic communications for the launch of Asacha Media Group's Pan-European production business, Charlie has continued to help us achieve industry-wide awareness of our company vision, our executive and creative talent, and our cross-border growth."</div>
+        <div class="testimonial-attr">Marina Williams and Gaspard de Chavagnac</div>
+        <div class="testimonial-company">Co-Founders, Asacha Media Group</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.mbcgroup.tv" target="_blank" rel="noopener" class="testimonial-logo-link" title="MBC Group">
+          <img loading="lazy" src="images/mbc-group.jpg" alt="MBC Group" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"Working in liaison with MBC's teams in the Middle East, Charlie delivered an impactful campaign for the North American launch of the company's Arab Language streaming service, 'Shahid VIP', successfully reaching target audiences across the U.S. and Canada."</div>
+        <div class="testimonial-attr">Marc Antoine d'Halluin</div>
+        <div class="testimonial-company">Advisor to The Board and former CEO, MBC</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.rivrmedia.com" target="_blank" rel="noopener" class="testimonial-logo-link" title="RIVR Media">
+          <img loading="lazy" src="images/rivr-media.jpg" alt="RIVR Media" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"Charlie led the communications strategy and execution for the launch of RIVR Media's full-service film and TV studio in Knoxville, Tennessee. The results he achieved have spotlighted 'RIVR Studios' as a top-tier production space and a valuable resource for the industry, helping us to attract business from across the U.S."</div>
+        <div class="testimonial-attr">Lori Golden-Stryer, CEO</div>
+        <div class="testimonial-company">RIVR Media</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.youngestmedia.com" target="_blank" rel="noopener" class="testimonial-logo-link" title="Youngest Media">
+          <img loading="lazy" src="images/youngest-media.jpg" alt="Youngest Media" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"Charlie's knowledge of the international TV market and brand promotion is second to none. He has been an invaluable help in making sure our shows are brought to widest possible international audience while amplifying our company message, and is a great resource to lean on."</div>
+        <div class="testimonial-attr">Lucas Church</div>
+        <div class="testimonial-company">Co-Founder, Youngest Media</div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="testimonial-logo-wrap">
+        <a href="https://www.eccholine.com" target="_blank" rel="noopener" class="testimonial-logo-link" title="Eccholine">
+          <img loading="lazy" src="images/eccholine.png" alt="Eccholine" style="max-width:110px;max-height:55px;width:auto;height:auto;display:block;">
+        </a>
+      </div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote">"Charlie collaborated with our international executive production team to develop a comprehensive crisis communications plan for Eccholine. This has equipped our business with an effective toolkit to manage a wide range of potential scenarios on large-scale productions spanning multiple territories."</div>
+        <div class="testimonial-attr">Liza Kuznetsova</div>
+        <div class="testimonial-company">Head of Operations, Eccholine</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="background-section" id="background">
+  <div class="reveal">
+    <div class="section-kicker">Background</div>
+    <div class="section-title">Charlie Gardner</div>
+    <div class="section-rule"></div>
+  </div>
+  <div class="bg-grid reveal">
+    <div class="bg-text">
+      <p>Prior to founding Gardner Global Communications in Los Angeles in 2019, Charlie Gardner served as Global Communications Director at Endemol Shine Group — then the world's largest independent production company, with operations spanning more than 100 companies across 20+ countries. As a member of the Group Executive Committee, he helped set the strategic direction of the business at the highest level.</p>
+      <p>Charlie began his communications career at an international public affairs consultancy, advising corporations on political and legislative developments across the UK and globally. He went on to play a central role in the launch of UK broadcaster Channel 5, leading the network's corporate communications from the ground up.</p>
+      <p>Today, Charlie works directly with clients across the U.S., UK, Europe, the Middle East, and Asia — senior counsel at every stage, with no junior handoffs.</p>
+    </div>
+    <div class="bg-pullquote">
+      <div class="bg-pullquote-text">"Having played a central role in seeing the Group through our merger, Charlie continued to do a brilliant job of strongly positioning the Endemol Shine brand in the international marketplace, while skillfully managing internal communications and keeping our global group connected."</div>
+      <div class="bg-pullquote-attr">Sophie Turner Laing, CEO</div>
+      <div class="bg-pullquote-title">Endemol Shine Group (2014–2020)</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="reveal">
+    <div class="section-kicker">Get in Touch</div>
+    <div class="section-title">Contact</div>
+    <div class="section-rule"></div>
+    <div class="contact-lead">To discuss how Gardner Global Communications can support your business, please get in touch directly.</div>
+    <a href="mailto:charlie@gardner-global.com" class="contact-email">charlie@gardner-global.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-strapline">PR for Creative Businesses</div>
+  <div class="footer-copy">&copy; 2026 Gardner Global Communications</div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
+  });
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}); 
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Carousel
+let current = 0;
+const total = 5;
+const track = document.getElementById('track');
+const counter = document.getElementById('counter');
+const dotsEl = document.getElementById('dots');
+const autoLabel = document.getElementById('autoLabel');
+let autoTimer;
+let paused = false;
+
+if(track) {
+  for(let i=0;i<total;i++){
+    const d = document.createElement('button');
+    d.className = 'dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to slide '+(i+1));
+    d.onclick=()=>{goTo(i);pauseAuto();};
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(n){
+    current=(n+total)%total;
+    track.style.transform=`translateX(-${current*100}%)`;
+    counter.textContent=`${current+1} / ${total}`;
+    document.querySelectorAll('.dot').forEach((d,i)=>d.className='dot'+(i===current?' active':''));
+  }
+  function move(dir){goTo(current+dir);pauseAuto();}
+  function startAuto(){autoTimer=setInterval(()=>goTo(current+1),2500);autoLabel.textContent='Auto';paused=false;}
+  function pauseAuto(){clearInterval(autoTimer);autoLabel.textContent='Paused';paused=true;setTimeout(()=>{if(paused){startAuto();}},12000);}
+  startAuto();
+}
+window.move = move;
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+function closeMobileMenu(){
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-label','Open menu');
+}
+if(hamburger){
+  hamburger.addEventListener('click', function(){
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+}
+
+</script>
+</body>
+</html>
